@@ -23,29 +23,22 @@ end
 function love.draw()
 	if drawRect then 
 		drawRectangles()
-		Prof:dettach()
+		Prof:detach()
 	end 
 	if ProfOn then 
 		Prof:draw({50})
 	end	
 end
-function hay()
-end 
 function love.update(dt)
 	Prof:attach()
 	iterateSmall()
 	iterateLarge()
 	if drawRect then 
-		Prof:dettach(true)
+		Prof:detach(true)
 	else 
-		Prof:dettach()
-	end 
-	if hey then 
-		hay()
-		hay()
-		hay()
-		hay()
-	end 
+		Prof:detach()
+	end  
+	local data = Prof:unpack()
 end
 function love.keypressed(key)
 	if key == "esc" then 
