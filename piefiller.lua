@@ -78,6 +78,9 @@ end
 function piefiller:setKey(table_or_mode,key)
 	if type(table_or_mode) == "table" then 
 		self.keys = table_or_mode
+		for i,v in pairs(table_or_mode) do 
+			if self.keys[i] then self.keys[i] = v end			
+		end 
 	elseif type(table_or_mode) == "string" then 
 		if not self.keys[table_or_mode] then error("Invalid mode: "..tostring(table_or_mode)) end
 		self.keys[table_or_mode] = key
@@ -359,7 +362,7 @@ function piefiller:unpack(fn)
 			current_line = v.cur,
 			source = v.src,
 			time_taken = v.time, 
-			precentage = v.prc, 
+			percentage = v.prc, 
 			caller = v.caller,
 		}
 		if fn then 
