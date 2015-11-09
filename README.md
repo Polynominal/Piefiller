@@ -48,46 +48,62 @@ c	= hides/shows hidden processes
 
 p	= saves to file called "Profile" and opens directory for you
 ## To redefine these:
+Modes available:
+```lua
+reset
+increase_depth
+decrease_depth
+increase_step_size
+decrease_step_size
+shorten_names
+show_hidden
+save_to_file
+```
 To redefine only one of the keys:
-	```lua
-		piefiller:setKey(mode,key)
-	```
-	example:
-	```lua
-		piefiller:setKey("increase_depth","up")
-	```
+
+```lua
+piefiller:setKey(mode,key)
+```
+
+example:
+
+```lua
+piefiller:setKey("increase_depth","up")
+```
 To redefine all of the keys:
-	```lua
+```lua
 	
-	table = {
-		"increase_depth" = "up"
-	}
-	piefiller:setKey(table)
+table = {
+	"increase_depth" = "up"
+}
+piefiller:setKey(table)
 	
-	```
+```
 # For your own interpretation 
 	If you wish to interpret the data on your own use piefiller:unpack().
 	Output is a table as such:
-	```lua
-		local data = {
-			items = { 
-				{ 
-					name,
-					line_defined, 
-					current_line,
-					source,
-					time_taken, 
-					percentage,
-					caller,
-				}
-			}, 
-			about = {
-				depth,
-				step, 
-				totalTime,
-			}, 
-		} 
-	```
+	
+```lua
+	data = {
+		items = { 
+			{ 
+				name,
+				line_defined, 
+				current_line,
+				source,
+				time_taken, 
+				percentage,
+				caller,
+			}
+		}, 
+		about = {
+			depth,
+			step, 
+			totalTime,
+		}, 
+	} 
+```
+	
 # Additional notes
 The best depth to search for is 2 and 3.
 
