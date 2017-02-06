@@ -15,7 +15,7 @@ Graphical profiler for Love2D 9.2
  function love.update()
 	Pie:attach()
 		-- do something
-	Pie:dettach()
+	Pie:detach()
  end
 ```
 4) draw the output in your draw function and give event hooks for your pie.
