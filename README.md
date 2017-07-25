@@ -1,6 +1,6 @@
 # Piefiller
 Graphical profiler for Love2D 9.2
-#Usage
+# Usage
 1) require the file:
 ```lua
   piefiller = require("piefiller")
