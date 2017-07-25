@@ -31,7 +31,7 @@ Graphical profiler for Love2D 9.2
  end
 ```
 5) When you get sufficient output press the "P" key to output to file.
-#Keys
+# Keys
 r 	= resets the pie 
 
 up 	= decreases depth 
