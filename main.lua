@@ -41,7 +41,7 @@ function love.update(dt)
 	local data = Prof:unpack()
 end
 function love.keypressed(key)
-	if key == "esc" then 
+	if key == "escape" then 
 		ProfOn = not ProfOn
 	elseif key == ";" then 
 		drawRect = not drawRect 
