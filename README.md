@@ -1,5 +1,5 @@
 # Piefiller
-Graphical profiler for Love2D 9.2
+Graphical profiler for Love2D 0.10.2
 # Usage
 1) require the file:
 ```lua
